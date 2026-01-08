@@ -1,0 +1,93 @@
+.container {
+    padding: 40px 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #1e293b;
+    text-align: center;
+}
+
+.flightSummary {
+    background: #f1f5f9;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+}
+
+.flightSummary h3 {
+    margin-bottom: 5px;
+    color: #0f172a;
+}
+
+.price {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #2563eb;
+    margin-top: 10px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.formGroup label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #475569;
+}
+
+.input {
+    padding: 10px 15px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.submitBtn {
+    background: #2563eb;
+    color: white;
+    padding: 12px;
+    border-radius: 6px;
+    border: none;
+    font-weight: 600;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.submitBtn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.cancelBtn {
+    background: transparent;
+    color: #64748b;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}

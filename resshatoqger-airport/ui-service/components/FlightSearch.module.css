@@ -1,0 +1,221 @@
+.searchContainer {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+    margin-top: -60px;
+    transition: all 0.3s ease;
+}
+
+.headerRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1e293b;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.aiBadge {
+    background: linear-gradient(135deg, #8b5cf6, #d946ef);
+    color: white;
+    font-size: 0.75rem;
+    padding: 2px 8px;
+    border-radius: 12px;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.toggleContainer {
+    display: flex;
+    background: #f1f5f9;
+    padding: 4px;
+    border-radius: 12px;
+}
+
+.toggleBtn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    font-weight: 600;
+    color: #64748b;
+    background: transparent;
+    transition: all 0.2s;
+}
+
+.toggleBtn.active {
+    background: white;
+    color: #3b82f6;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.formGrid {
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+    width: 100%;
+    animation: fadeIn 0.4s ease;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+}
+
+.label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #475569;
+}
+
+.input {
+    padding: 12px 15px;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    font-size: 1rem;
+    width: 100%;
+    transition: all 0.2s;
+    background-color: #f8fafc;
+    height: 50px;
+}
+
+.input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.submitBtn {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    color: white;
+    padding: 0 30px;
+    border: none;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    height: 50px;
+    white-space: nowrap;
+    min-width: 180px;
+}
+
+.submitBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.submitBtn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* AI Mode Specific Styles */
+.aiWrapper {
+    animation: fadeIn 0.4s ease;
+}
+
+.aiInput {
+    width: 100%;
+    height: 120px;
+    padding: 20px;
+    border: 2px solid #e2e8f0;
+    border-radius: 16px;
+    font-size: 1.1rem;
+    resize: none;
+    font-family: inherit;
+    background-color: #f8fafc;
+    transition: all 0.2s;
+}
+
+.aiInput:focus {
+    outline: none;
+    border-color: #8b5cf6;
+    background: white;
+    box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.1);
+}
+
+.aiFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.aiTips {
+    font-size: 0.9rem;
+    color: #64748b;
+    background: #f1f5f9;
+    padding: 8px 16px;
+    border-radius: 8px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .searchContainer {
+        margin-top: 20px;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .headerRow {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .toggleContainer {
+        width: 100%;
+    }
+
+    .toggleBtn {
+        flex: 1;
+        text-align: center;
+    }
+
+    .formGrid {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .submitBtn {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .aiFooter {
+        flex-direction: column;
+        gap: 15px;
+        align-items: stretch;
+    }
+}

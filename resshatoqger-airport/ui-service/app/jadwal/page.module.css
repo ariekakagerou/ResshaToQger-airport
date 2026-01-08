@@ -1,0 +1,615 @@
+/* Container */
+.container {
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #f8fafc, #dbeafe, #f1f5f9);
+}
+
+.maxWidth {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+@media (min-width: 640px) {
+    .maxWidth {
+        padding: 2rem 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .maxWidth {
+        padding: 2rem 2rem;
+    }
+}
+
+/* Hero Header */
+.heroHeader {
+    background: linear-gradient(to right, #2563eb, #1e40af);
+    border-radius: 1rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+.heroContent {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+@media (min-width: 768px) {
+    .heroContent {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.headerLeft {
+    display: flex;
+    flex-direction: column;
+}
+
+.titleWrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.iconBox {
+    width: 3rem;
+    height: 3rem;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.875rem;
+}
+
+.title {
+    font-size: 2.25rem;
+    font-weight: 700;
+}
+
+.subtitle {
+    color: #bfdbfe;
+    font-size: 0.875rem;
+}
+
+.headerRight {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.liveTimeBox {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(16px);
+    border-radius: 0.75rem;
+    padding: 0.75rem 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.liveTimeContent {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.pulseWrapper {
+    position: relative;
+    width: 0.5rem;
+    height: 0.5rem;
+}
+
+.pulseDot {
+    width: 0.5rem;
+    height: 0.5rem;
+    background: #fca5a5;
+    border-radius: 9999px;
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.pulseRing {
+    position: absolute;
+    inset: 0;
+    width: 0.5rem;
+    height: 0.5rem;
+    background: #fca5a5;
+    border-radius: 9999px;
+    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes ping {
+
+    75%,
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+.liveTimeLabel {
+    font-size: 0.75rem;
+    color: #bfdbfe;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.liveTime {
+    font-size: 1.5rem;
+    font-family: ui-monospace, monospace;
+    font-weight: 700;
+}
+
+.dateInput {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(16px);
+    border-radius: 0.75rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    outline: none;
+}
+
+.dateInput:focus {
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+}
+
+/* Statistics Cards */
+.statsGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 640px) {
+    .statsGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .statsGrid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.statCard {
+    border-radius: 1rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    color: white;
+    transition: all 0.3s;
+}
+
+.statCard:hover {
+    transform: scale(1.05);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.statCardBlue {
+    background: linear-gradient(to bottom right, #3b82f6, #2563eb);
+    box-shadow: 0 0 0 4px rgb(191 219 254 / 0.3);
+}
+
+.statCardGreen {
+    background: linear-gradient(to bottom right, #22c55e, #16a34a);
+    box-shadow: 0 0 0 4px rgb(187 247 208 / 0.3);
+}
+
+.statCardRed {
+    background: linear-gradient(to bottom right, #ef4444, #dc2626);
+    box-shadow: 0 0 0 4px rgb(254 202 202 / 0.3);
+}
+
+.statCardGray {
+    background: linear-gradient(to bottom right, #64748b, #475569);
+    box-shadow: 0 0 0 4px rgb(226 232 240 / 0.3);
+}
+
+.statCardContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+}
+
+.statIcon {
+    font-size: 2.25rem;
+}
+
+.statValues {
+    text-align: right;
+}
+
+.statNumber {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.statLabel {
+    font-size: 0.875rem;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+/* Filters */
+.filtersCard {
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.filtersContent {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+@media (min-width: 1024px) {
+    .filtersContent {
+        flex-direction: row;
+    }
+}
+
+.searchWrapper {
+    flex: 1;
+    position: relative;
+}
+
+.searchInput {
+    width: 100%;
+    padding: 0.75rem 1.25rem 0.75rem 3rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 0.75rem;
+    font-size: 1.125rem;
+    outline: none;
+    transition: all 0.2s;
+}
+
+.searchInput:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 4px rgb(219 234 254);
+}
+
+.searchIcon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.25rem;
+}
+
+.filtersRow {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+@media (min-width: 640px) {
+    .filtersRow {
+        flex-direction: row;
+    }
+}
+
+.select {
+    padding: 0.75rem 1.25rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 0.75rem;
+    background: white;
+    cursor: pointer;
+    font-weight: 500;
+    outline: none;
+    transition: all 0.2s;
+}
+
+.select:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 4px rgb(219 234 254);
+}
+
+.exportButton {
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(to right, #2563eb, #1d4ed8);
+    color: white;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s;
+}
+
+.exportButton:hover {
+    background: linear-gradient(to right, #1d4ed8, #1e40af);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.exportButton:active {
+    transform: scale(0.95);
+}
+
+/* Table */
+.tableCard {
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.tableWrapper {
+    overflow-x: auto;
+}
+
+.table {
+    width: 100%;
+}
+
+.tableHead {
+    background: linear-gradient(to right, #334155, #1e293b);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.tableHeadCell {
+    padding: 1rem 1.5rem;
+    text-align: left;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.tableHeadCellSortable {
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.tableHeadCellSortable:hover {
+    background-color: #475569;
+}
+
+.tableHeadContent {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.sortIcon {
+    color: #cbd5e1;
+}
+
+.tableRow {
+    transition: all 0.2s;
+}
+
+.tableRow:hover {
+    background-color: #eff6ff;
+}
+
+.tableRowEven {
+    background-color: rgba(248, 250, 252, 0.5);
+}
+
+.tableRowSoon {
+    background-color: #ffedd5;
+    border-left: 4px solid #f97316;
+}
+
+.tableCell {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.timeCell {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.timeText {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.soonBadge {
+    padding: 0.25rem 0.5rem;
+    background: #f97316;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border-radius: 9999px;
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.flightCode {
+    font-family: ui-monospace, monospace;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #1d4ed8;
+    background: #eff6ff;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.5rem;
+    display: inline-block;
+}
+
+.destination {
+    font-weight: 600;
+    color: #334155;
+}
+
+.airline {
+    color: #475569;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.airlineLogo {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+.gate {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: #334155;
+    color: white;
+    font-weight: 700;
+    border-radius: 0.5rem;
+}
+
+.terminal {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: #f1f5f9;
+    color: #334155;
+    font-weight: 700;
+    border-radius: 0.5rem;
+    border: 2px solid #cbd5e1;
+}
+
+.statusBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-weight: 700;
+    font-size: 0.875rem;
+}
+
+.statusOnTime {
+    background: #dcfce7;
+    color: #166534;
+    box-shadow: 0 0 0 2px #bbf7d0;
+}
+
+.statusDelayed {
+    background: #fee2e2;
+    color: #991b1b;
+    box-shadow: 0 0 0 2px #fecaca;
+}
+
+.statusDeparted {
+    background: #f1f5f9;
+    color: #475569;
+    box-shadow: 0 0 0 2px #e2e8f0;
+}
+
+.statusIcon {
+    font-size: 1.125rem;
+}
+
+.emptyState {
+    padding: 4rem 1.5rem;
+    text-align: center;
+}
+
+.emptyStateContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.emptyStateIcon {
+    font-size: 4rem;
+}
+
+.emptyStateTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #475569;
+}
+
+.emptyStateText {
+    color: #94a3b8;
+}
+
+/* Footer */
+.tableFooter {
+    background: #f8fafc;
+    padding: 1rem 1.5rem;
+    border-top: 1px solid #e2e8f0;
+}
+
+.footerContent {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    font-size: 0.875rem;
+}
+
+@media (min-width: 640px) {
+    .footerContent {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.lastUpdate {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #475569;
+}
+
+.updateDot {
+    width: 0.5rem;
+    height: 0.5rem;
+    background: #22c55e;
+    border-radius: 9999px;
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.updateLabel {
+    font-weight: 600;
+}
+
+.updateTime {
+    font-family: ui-monospace, monospace;
+}
+
+.flightCount {
+    color: #475569;
+    font-weight: 600;
+}
+
+.countCurrent {
+    color: #2563eb;
+}
+
+.countTotal {
+    color: #1e293b;
+}
