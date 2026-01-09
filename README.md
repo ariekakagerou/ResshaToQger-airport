@@ -62,7 +62,7 @@ Aplikasi ini berjalan di atas ekosistem Docker dengan konfigurasi sebagai beriku
 1.  **Clone Repository**
     ```bash
     git clone https://github.com/ariekakagerou/ResshaToQger-airport.git
-    cd bpjs_pengguna
+    cd ResshaToQger-airport
     ```
 
 2.  **Konfigurasi Environment**
